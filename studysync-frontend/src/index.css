@@ -1,0 +1,39 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  This sets the global background color and prevents horizontal scrolling.
+*/
+@layer base {
+  body {
+    @apply bg-slate-900 text-white overflow-x-hidden;
+  }
+}
+
+/* --- THIS IS THE NEW ANIMATION CODE --- */
+/*
+  We define a keyframe animation named 'aurora'.
+  It describes how an element should transform over time.
+  0% is the start, 50% is the middle, 100% is the end.
+  It moves the blobs around and slightly scales them to create a fluid, breathing effect.
+*/
+@keyframes aurora {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(40px, 60px) scale(1.2);
+  }
+}
+
+@keyframes aurora-reverse {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-40px, -60px) scale(0.8);
+  }
+}
