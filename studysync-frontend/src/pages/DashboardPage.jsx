@@ -9,8 +9,7 @@ import GroupsListView from '../components/GroupsListView';
 import StudyTimer from '../components/StudyTimer';
 import Header from '../components/Header'; // Assuming Header.jsx exists
 import LeaderboardView from '../components/LeaderboardView';
-const API_URL = 'http://localhost:5000';
-
+const API_URL = import.meta.env.VITE_API_URL;
 export default function DashboardPage({ token, onLogout }) {
     // --- State ---
     const [user, setUser] = useState(null);

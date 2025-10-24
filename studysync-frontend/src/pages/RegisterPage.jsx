@@ -1,8 +1,7 @@
 // src/pages/RegisterPage.jsx
 
 import React, { useState } from 'react';
-const API_URL = 'http://localhost:5000';
-
+const API_URL = import.meta.env.VITE_API_URL;
 export default function RegisterPage({ setToken, setPage }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');

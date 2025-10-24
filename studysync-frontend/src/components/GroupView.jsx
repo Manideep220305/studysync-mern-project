@@ -3,8 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { io } from "socket.io-client";
 import MaterialsTab from './MaterialsTab'; 
-const API_URL = 'http://localhost:5000';
-
+const API_URL = import.meta.env.VITE_API_URL;
 export default function GroupView({ groupId, token, user, onBack, onDeleteGroup, onLeaveGroup }) {
     const [groupData, setGroupData] = useState(null);
     const [loading, setLoading] = useState(true);

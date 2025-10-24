@@ -2,8 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import Icon from './Icon';
-const API_URL = 'http://localhost:5000';
-
+const API_URL = import.meta.env.VITE_API_URL;
 export default function LeaderboardView({ groups, token, currentUser }) {
     const [selectedGroupId, setSelectedGroupId] = useState('');
     const [leaderboardData, setLeaderboardData] = useState(null);
